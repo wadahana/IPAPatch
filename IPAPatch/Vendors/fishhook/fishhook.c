@@ -45,10 +45,6 @@ typedef struct nlist nlist_t;
 #define LC_SEGMENT_ARCH_DEPENDENT LC_SEGMENT
 #endif
 
-#ifndef SEG_DATA_CONST
-#define SEG_DATA_CONST  "__DATA_CONST"
-#endif
-
 struct rebindings_entry {
   struct rebinding *rebindings;
   size_t rebindings_nel;
@@ -92,17 +88,11 @@ static void perform_rebinding_with_section(struct rebindings_entry *rebindings,
     }
     uint32_t strtab_offset = symtab[symtab_index].n_un.n_strx;
     char *symbol_name = strtab + strtab_offset;
-    if (strnlen(symbol_name, 2) < 2) {
-      continue;
-    }
     struct rebindings_entry *cur = rebindings;
     while (cur) {
       for (uint j = 0; j < cur->rebindings_nel; j++) {
-        if (strcmp(&symbol_name[1], cur->rebindings[j].name) == 0) {
-          if (cur->rebindings[j].replaced != NULL &&
-              indirect_symbol_bindings[i] != cur->rebindings[j].replacement) {
-            *(cur->rebindings[j].replaced) = indirect_symbol_bindings[i];
-          }
+        if (strlen(symbol_name) > 1 &&
+            strcmp(&symbol_name[1], cur->rebindings[j].name) == 0) {
           indirect_symbol_bindings[i] = cur->rebindings[j].replacement;
           goto symbol_loop;
         }
@@ -157,8 +147,7 @@ static void rebind_symbols_for_image(struct rebindings_entry *rebindings,
   for (uint i = 0; i < header->ncmds; i++, cur += cur_seg_cmd->cmdsize) {
     cur_seg_cmd = (segment_command_t *)cur;
     if (cur_seg_cmd->cmd == LC_SEGMENT_ARCH_DEPENDENT) {
-      if (strcmp(cur_seg_cmd->segname, SEG_DATA) != 0 &&
-          strcmp(cur_seg_cmd->segname, SEG_DATA_CONST) != 0) {
+      if (strcmp(cur_seg_cmd->segname, SEG_DATA) != 0) {
         continue;
       }
       for (uint j = 0; j < cur_seg_cmd->nsects; j++) {
