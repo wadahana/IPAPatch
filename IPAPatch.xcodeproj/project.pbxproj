@@ -7,13 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1C45F9651EE02FC70002A18A /* OCTrace.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1C45F9611EE02FC70002A18A /* OCTrace.cpp */; };
+		1C45F9661EE02FC70002A18A /* OCTrace.h in Headers */ = {isa = PBXBuildFile; fileRef = 1C45F9621EE02FC70002A18A /* OCTrace.h */; };
+		1C45F9671EE02FC70002A18A /* OCTraceImage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1C45F9631EE02FC70002A18A /* OCTraceImage.cpp */; };
+		1C45F9681EE02FC70002A18A /* OCTraceImage.h in Headers */ = {isa = PBXBuildFile; fileRef = 1C45F9641EE02FC70002A18A /* OCTraceImage.h */; };
 		C63AC1A51E838BB70094B1C5 /* fishhook.c in Sources */ = {isa = PBXBuildFile; fileRef = C63AC1A21E838BB70094B1C5 /* fishhook.c */; };
 		C63AC1A61E838BB70094B1C5 /* fishhook.h in Headers */ = {isa = PBXBuildFile; fileRef = C63AC1A31E838BB70094B1C5 /* fishhook.h */; };
 		C63AC1AA1E8392210094B1C5 /* IPAPatchBypassAntiDebugging.h in Headers */ = {isa = PBXBuildFile; fileRef = C63AC1A81E8392210094B1C5 /* IPAPatchBypassAntiDebugging.h */; };
 		C63AC1AB1E8392210094B1C5 /* IPAPatchBypassAntiDebugging.m in Sources */ = {isa = PBXBuildFile; fileRef = C63AC1A91E8392210094B1C5 /* IPAPatchBypassAntiDebugging.m */; };
 		C64288391E7BF9E900C0BBB0 /* ProjectConfigurationWarning.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C64288371E7BF9E900C0BBB0 /* ProjectConfigurationWarning.cpp */; };
 		C6B263271E7BC9DF009B4DEA /* IPAPatchEntry.h in Headers */ = {isa = PBXBuildFile; fileRef = C6B263251E7BC9DF009B4DEA /* IPAPatchEntry.h */; };
-		C6B263281E7BC9DF009B4DEA /* IPAPatchEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = C6B263261E7BC9DF009B4DEA /* IPAPatchEntry.m */; };
+		C6B263281E7BC9DF009B4DEA /* IPAPatchEntry.mm in Sources */ = {isa = PBXBuildFile; fileRef = C6B263261E7BC9DF009B4DEA /* IPAPatchEntry.mm */; };
 		C6B2634D1E7BCB31009B4DEA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C6B2634C1E7BCB31009B4DEA /* main.m */; };
 		C6B263501E7BCB31009B4DEA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C6B2634F1E7BCB31009B4DEA /* AppDelegate.m */; };
 /* End PBXBuildFile section */
@@ -29,6 +33,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1C45F9611EE02FC70002A18A /* OCTrace.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = OCTrace.cpp; sourceTree = "<group>"; };
+		1C45F9621EE02FC70002A18A /* OCTrace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCTrace.h; sourceTree = "<group>"; };
+		1C45F9631EE02FC70002A18A /* OCTraceImage.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = OCTraceImage.cpp; sourceTree = "<group>"; };
+		1C45F9641EE02FC70002A18A /* OCTraceImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCTraceImage.h; sourceTree = "<group>"; };
 		C63AC1A21E838BB70094B1C5 /* fishhook.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = fishhook.c; sourceTree = "<group>"; };
 		C63AC1A31E838BB70094B1C5 /* fishhook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = fishhook.h; sourceTree = "<group>"; };
 		C63AC1A41E838BB70094B1C5 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
@@ -39,7 +47,7 @@
 		C6B263071E7BC97B009B4DEA /* IPAPatch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = IPAPatch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6B2630B1E7BC97B009B4DEA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C6B263251E7BC9DF009B4DEA /* IPAPatchEntry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IPAPatchEntry.h; sourceTree = "<group>"; };
-		C6B263261E7BC9DF009B4DEA /* IPAPatchEntry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IPAPatchEntry.m; sourceTree = "<group>"; };
+		C6B263261E7BC9DF009B4DEA /* IPAPatchEntry.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = IPAPatchEntry.mm; sourceTree = "<group>"; };
 		C6B263491E7BCB31009B4DEA /* IPAPatch-DummyApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "IPAPatch-DummyApp.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6B2634C1E7BCB31009B4DEA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C6B2634E1E7BCB31009B4DEA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -66,9 +74,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1C45F9601EE02FB50002A18A /* objctrace */ = {
+			isa = PBXGroup;
+			children = (
+				1C45F9611EE02FC70002A18A /* OCTrace.cpp */,
+				1C45F9621EE02FC70002A18A /* OCTrace.h */,
+				1C45F9631EE02FC70002A18A /* OCTraceImage.cpp */,
+				1C45F9641EE02FC70002A18A /* OCTraceImage.h */,
+			);
+			path = objctrace;
+			sourceTree = "<group>";
+		};
 		C63AC1A01E838B8E0094B1C5 /* Vendors */ = {
 			isa = PBXGroup;
 			children = (
+				1C45F9601EE02FB50002A18A /* objctrace */,
 				C63AC1A11E838BB70094B1C5 /* fishhook */,
 			);
 			path = Vendors;
@@ -109,7 +129,7 @@
 				C63AC1A01E838B8E0094B1C5 /* Vendors */,
 				C6B2630B1E7BC97B009B4DEA /* Info.plist */,
 				C6B263251E7BC9DF009B4DEA /* IPAPatchEntry.h */,
-				C6B263261E7BC9DF009B4DEA /* IPAPatchEntry.m */,
+				C6B263261E7BC9DF009B4DEA /* IPAPatchEntry.mm */,
 				C63AC1A81E8392210094B1C5 /* IPAPatchBypassAntiDebugging.h */,
 				C63AC1A91E8392210094B1C5 /* IPAPatchBypassAntiDebugging.m */,
 			);
@@ -152,9 +172,11 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1C45F9661EE02FC70002A18A /* OCTrace.h in Headers */,
 				C6B263271E7BC9DF009B4DEA /* IPAPatchEntry.h in Headers */,
 				C63AC1A61E838BB70094B1C5 /* fishhook.h in Headers */,
 				C63AC1AA1E8392210094B1C5 /* IPAPatchBypassAntiDebugging.h in Headers */,
+				1C45F9681EE02FC70002A18A /* OCTraceImage.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,8 +299,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				C63AC1AB1E8392210094B1C5 /* IPAPatchBypassAntiDebugging.m in Sources */,
-				C6B263281E7BC9DF009B4DEA /* IPAPatchEntry.m in Sources */,
+				1C45F9651EE02FC70002A18A /* OCTrace.cpp in Sources */,
+				C6B263281E7BC9DF009B4DEA /* IPAPatchEntry.mm in Sources */,
 				C63AC1A51E838BB70094B1C5 /* fishhook.c in Sources */,
+				1C45F9671EE02FC70002A18A /* OCTraceImage.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

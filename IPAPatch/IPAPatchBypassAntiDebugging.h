@@ -10,4 +10,6 @@
 
 @interface IPAPatchBypassAntiDebugging : NSObject
 
++ (void)load;
+
 @end
