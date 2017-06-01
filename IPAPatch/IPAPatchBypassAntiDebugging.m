@@ -11,8 +11,8 @@
 #import <dlfcn.h>
 #import <sys/sysctl.h>
 
-#define TESTS_BYPASS 0
-
+#define TESTS_BYPASS (0)
+#define LOG_ENABLE (0)
 // Sources:
 // https://www.coredump.gr/articles/ios-anti-debugging-protections-part-1/
 // https://www.coredump.gr/articles/ios-anti-debugging-protections-part-2/
@@ -48,34 +48,33 @@ static int (*original_sysctl)(int *, u_int, void *, size_t *, void *, size_t);
 
 typedef struct kinfo_proc ipa_kinfo_proc;
 
-int	hooked_sysctl(int * arg0, u_int arg1, void * arg2, size_t * arg3, void * arg4, size_t arg5)
+int hooked_sysctl(int *name, u_int namelen, void *oldp, size_t *oldlenp, void *newp, size_t newlen)
 {
-    bool modify_needed = arg1 == 4 && arg0[0] == CTL_KERN && arg0[1] == KERN_PROC && arg0[2] == KERN_PROC_PID && arg2 && arg3 && (*arg3 == sizeof(ipa_kinfo_proc));
-    
-    if (modify_needed) {
-        
-        bool original_p_traced = false;
-        {
-            ipa_kinfo_proc * pointer = arg2;
-            ipa_kinfo_proc info = *pointer;
-            original_p_traced = (info.kp_proc.p_flag & P_TRACED) != 0;
+#if (LOG_ENABLE)
+    fprintf(stderr, "hooked_sysctl -> ");
+#endif
+    int retval = original_sysctl(name, namelen, oldp, oldlenp, newp, newlen);
+    if (name != NULL) {
+#if (LOG_ENABLE)
+        for (int i = 0; i < namelen; i++) {
+            fprintf(stderr, "name[%d]=%d; ", i, name[i]);
         }
-        
-        int ret = original_sysctl(arg0, arg1, arg2, arg3, arg4, arg5);
-        
-        // keep P_TRACED if input value contains it
-        if (!original_p_traced) {
-            ipa_kinfo_proc * pointer = arg2;
-            ipa_kinfo_proc info = *pointer;
-            info.kp_proc.p_flag ^= P_TRACED;
-            *pointer = info;
+#endif
+        if (namelen >= 4 /* && name[0] == CTL_KERN */ && name[1] == KERN_PROC && name[2] == KERN_PROC_PID) {
+            struct kinfo_proc *pinfo = (struct kinfo_proc *)oldp;
+            if (pinfo != NULL && *oldlenp >= sizeof(struct kinfo_proc)) {
+#if (LOG_ENABLE)
+                fprintf(stderr, "sysctl -> pflag (%x) \n", pinfo->kp_proc.p_flag);
+#endif
+                pinfo->kp_proc.p_flag = pinfo->kp_proc.p_flag & (~P_TRACED);
+            }
         }
-        
-        return ret;
-        
-    } else {
-        return original_sysctl(arg0, arg1, arg2, arg3, arg4, arg5);
     }
+#if (LOG_ENABLE)
+    fprintf(stderr, "\n");
+    fflush(stderr);
+#endif
+    return retval;
 }
 
 static void disable_sysctl_debugger_checking()
