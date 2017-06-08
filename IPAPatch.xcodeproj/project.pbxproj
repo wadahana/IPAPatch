@@ -7,10 +7,38 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1C1BA2081EE7CCD900810953 /* IPAPatchScript.h in Headers */ = {isa = PBXBuildFile; fileRef = 1C1BA2061EE7CCD900810953 /* IPAPatchScript.h */; };
+		1C1BA2091EE7CCD900810953 /* IPAPatchScript.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1C1BA2071EE7CCD900810953 /* IPAPatchScript.mm */; };
+		1C1BA20D1EE7DE4D00810953 /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C1BA20C1EE7DE4D00810953 /* libxml2.tbd */; };
 		1C45F9651EE02FC70002A18A /* OCTrace.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1C45F9611EE02FC70002A18A /* OCTrace.cpp */; };
 		1C45F9661EE02FC70002A18A /* OCTrace.h in Headers */ = {isa = PBXBuildFile; fileRef = 1C45F9621EE02FC70002A18A /* OCTrace.h */; };
 		1C45F9671EE02FC70002A18A /* OCTraceImage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1C45F9631EE02FC70002A18A /* OCTraceImage.cpp */; };
 		1C45F9681EE02FC70002A18A /* OCTraceImage.h in Headers */ = {isa = PBXBuildFile; fileRef = 1C45F9641EE02FC70002A18A /* OCTraceImage.h */; };
+		1C45F96B1EE05D9A0002A18A /* OCTraceLogger.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1C45F9691EE05D9A0002A18A /* OCTraceLogger.cpp */; };
+		1C45F96C1EE05D9A0002A18A /* OCTraceLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = 1C45F96A1EE05D9A0002A18A /* OCTraceLogger.h */; };
+		1C45F96F1EE060270002A18A /* OCTraceLocalLogger.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1C45F96D1EE060270002A18A /* OCTraceLocalLogger.cpp */; };
+		1C45F9701EE060270002A18A /* OCTraceLocalLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = 1C45F96E1EE060270002A18A /* OCTraceLocalLogger.h */; };
+		1C45F9731EE134030002A18A /* OCTraceRemoteLogger.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1C45F9711EE134030002A18A /* OCTraceRemoteLogger.cpp */; };
+		1C45F9741EE134030002A18A /* OCTraceRemoteLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = 1C45F9721EE134030002A18A /* OCTraceRemoteLogger.h */; };
+		1C592A1B1EE1610000B2AC94 /* OCTraceUtils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1C592A191EE1610000B2AC94 /* OCTraceUtils.cpp */; };
+		1C592A1C1EE1610000B2AC94 /* OCTraceUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 1C592A1A1EE1610000B2AC94 /* OCTraceUtils.h */; };
+		1CA8C52E1EE431D700200E08 /* WspxLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = 1CA8C52D1EE431D700200E08 /* WspxLogger.h */; };
+		1CA8C52F1EE4338400200E08 /* libWspxLogger_iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CA8C52C1EE3D08A00200E08 /* libWspxLogger_iOS.a */; };
+		1CC5E2DB1EE25A8900058A72 /* Cycript.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CC5E2DA1EE25A8900058A72 /* Cycript.framework */; };
+		1CC5E2DE1EE26FED00058A72 /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CC5E2DD1EE26FED00058A72 /* JavaScriptCore.framework */; };
+		1CC5E2E01EE26FF500058A72 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CC5E2DF1EE26FF500058A72 /* libsqlite3.0.tbd */; };
+		1CC5E2E21EE2700800058A72 /* libstdc++.6.0.9.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CC5E2E11EE2700800058A72 /* libstdc++.6.0.9.tbd */; };
+		1CC5E2E61EE276E300058A72 /* OCTraceTest.h in Headers */ = {isa = PBXBuildFile; fileRef = 1CC5E2E41EE276E300058A72 /* OCTraceTest.h */; };
+		1CC5E2E71EE276E300058A72 /* OCTraceTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CC5E2E51EE276E300058A72 /* OCTraceTest.m */; };
+		1CC5E2FA1EE2B71400058A72 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CC5E2F91EE2B71400058A72 /* Foundation.framework */; };
+		1CC5E2FC1EE2B71800058A72 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CC5E2FB1EE2B71800058A72 /* UIKit.framework */; };
+		1CC5E6021EE2C2FF00058A72 /* wax.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CC5E6011EE2C2FF00058A72 /* wax.framework */; };
+		1CC5E60B1EE2E13D00058A72 /* WaxTest.h in Headers */ = {isa = PBXBuildFile; fileRef = 1CC5E6091EE2E13D00058A72 /* WaxTest.h */; };
+		1CC5E60C1EE2E13D00058A72 /* WaxTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CC5E60A1EE2E13D00058A72 /* WaxTest.m */; };
+		1CECCBA11EE960E700D58A16 /* NSBundle+Hooked.h in Headers */ = {isa = PBXBuildFile; fileRef = 1CECCB9F1EE960E700D58A16 /* NSBundle+Hooked.h */; };
+		1CECCBA21EE960E700D58A16 /* NSBundle+Hooked.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CECCBA01EE960E700D58A16 /* NSBundle+Hooked.m */; };
+		1CECCBA51EE9617E00D58A16 /* MethodSwizzling.h in Headers */ = {isa = PBXBuildFile; fileRef = 1CECCBA31EE9617E00D58A16 /* MethodSwizzling.h */; };
+		1CECCBA61EE9617E00D58A16 /* MethodSwizzling.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CECCBA41EE9617E00D58A16 /* MethodSwizzling.m */; };
 		C63AC1A51E838BB70094B1C5 /* fishhook.c in Sources */ = {isa = PBXBuildFile; fileRef = C63AC1A21E838BB70094B1C5 /* fishhook.c */; };
 		C63AC1A61E838BB70094B1C5 /* fishhook.h in Headers */ = {isa = PBXBuildFile; fileRef = C63AC1A31E838BB70094B1C5 /* fishhook.h */; };
 		C63AC1AA1E8392210094B1C5 /* IPAPatchBypassAntiDebugging.h in Headers */ = {isa = PBXBuildFile; fileRef = C63AC1A81E8392210094B1C5 /* IPAPatchBypassAntiDebugging.h */; };
@@ -23,6 +51,27 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		1C6D40E51EE567D60077AE31 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1CA8C5271EE3D08A00200E08 /* WspxLogger.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 1C6D40C31EE530CD0077AE31;
+			remoteInfo = WspxLogger_OSX;
+		};
+		1C6D40E71EE5685A0077AE31 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1CA8C5271EE3D08A00200E08 /* WspxLogger.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 1CA8C4FF1EE3C17C00200E08;
+			remoteInfo = WspxLogger_iOS;
+		};
+		1CA8C52B1EE3D08A00200E08 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1CA8C5271EE3D08A00200E08 /* WspxLogger.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 1CA8C5001EE3C17C00200E08;
+			remoteInfo = WspxLogger;
+		};
 		C6B263601E7BCC65009B4DEA /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = C6B262FE1E7BC97B009B4DEA /* Project object */;
@@ -33,10 +82,39 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1C1BA2061EE7CCD900810953 /* IPAPatchScript.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IPAPatchScript.h; sourceTree = "<group>"; };
+		1C1BA2071EE7CCD900810953 /* IPAPatchScript.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = IPAPatchScript.mm; sourceTree = "<group>"; };
+		1C1BA20C1EE7DE4D00810953 /* libxml2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.tbd; path = usr/lib/libxml2.tbd; sourceTree = SDKROOT; };
 		1C45F9611EE02FC70002A18A /* OCTrace.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = OCTrace.cpp; sourceTree = "<group>"; };
 		1C45F9621EE02FC70002A18A /* OCTrace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCTrace.h; sourceTree = "<group>"; };
 		1C45F9631EE02FC70002A18A /* OCTraceImage.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = OCTraceImage.cpp; sourceTree = "<group>"; };
 		1C45F9641EE02FC70002A18A /* OCTraceImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCTraceImage.h; sourceTree = "<group>"; };
+		1C45F9691EE05D9A0002A18A /* OCTraceLogger.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = OCTraceLogger.cpp; sourceTree = "<group>"; };
+		1C45F96A1EE05D9A0002A18A /* OCTraceLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCTraceLogger.h; sourceTree = "<group>"; };
+		1C45F96D1EE060270002A18A /* OCTraceLocalLogger.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = OCTraceLocalLogger.cpp; sourceTree = "<group>"; };
+		1C45F96E1EE060270002A18A /* OCTraceLocalLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCTraceLocalLogger.h; sourceTree = "<group>"; };
+		1C45F9711EE134030002A18A /* OCTraceRemoteLogger.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = OCTraceRemoteLogger.cpp; sourceTree = "<group>"; };
+		1C45F9721EE134030002A18A /* OCTraceRemoteLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCTraceRemoteLogger.h; sourceTree = "<group>"; };
+		1C592A191EE1610000B2AC94 /* OCTraceUtils.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = OCTraceUtils.cpp; sourceTree = "<group>"; };
+		1C592A1A1EE1610000B2AC94 /* OCTraceUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCTraceUtils.h; sourceTree = "<group>"; };
+		1CA8C5271EE3D08A00200E08 /* WspxLogger.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = WspxLogger.xcodeproj; path = WspxLogger/WspxLogger.xcodeproj; sourceTree = "<group>"; };
+		1CA8C52D1EE431D700200E08 /* WspxLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WspxLogger.h; path = WspxLogger/WspxLogger.h; sourceTree = "<group>"; };
+		1CC5E2DA1EE25A8900058A72 /* Cycript.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Cycript.framework; sourceTree = "<group>"; };
+		1CC5E2DD1EE26FED00058A72 /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		1CC5E2DF1EE26FF500058A72 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+		1CC5E2E11EE2700800058A72 /* libstdc++.6.0.9.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.6.0.9.tbd"; path = "usr/lib/libstdc++.6.0.9.tbd"; sourceTree = SDKROOT; };
+		1CC5E2E41EE276E300058A72 /* OCTraceTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCTraceTest.h; sourceTree = "<group>"; };
+		1CC5E2E51EE276E300058A72 /* OCTraceTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCTraceTest.m; sourceTree = "<group>"; };
+		1CC5E2F91EE2B71400058A72 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		1CC5E2FB1EE2B71800058A72 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		1CC5E2FD1EE2B72600058A72 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		1CC5E6011EE2C2FF00058A72 /* wax.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = wax.framework; sourceTree = "<group>"; };
+		1CC5E6091EE2E13D00058A72 /* WaxTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WaxTest.h; sourceTree = "<group>"; };
+		1CC5E60A1EE2E13D00058A72 /* WaxTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WaxTest.m; sourceTree = "<group>"; };
+		1CECCB9F1EE960E700D58A16 /* NSBundle+Hooked.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSBundle+Hooked.h"; sourceTree = "<group>"; };
+		1CECCBA01EE960E700D58A16 /* NSBundle+Hooked.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSBundle+Hooked.m"; sourceTree = "<group>"; };
+		1CECCBA31EE9617E00D58A16 /* MethodSwizzling.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MethodSwizzling.h; sourceTree = "<group>"; };
+		1CECCBA41EE9617E00D58A16 /* MethodSwizzling.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MethodSwizzling.m; sourceTree = "<group>"; };
 		C63AC1A21E838BB70094B1C5 /* fishhook.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = fishhook.c; sourceTree = "<group>"; };
 		C63AC1A31E838BB70094B1C5 /* fishhook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = fishhook.h; sourceTree = "<group>"; };
 		C63AC1A41E838BB70094B1C5 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
@@ -61,6 +139,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1C1BA20D1EE7DE4D00810953 /* libxml2.tbd in Frameworks */,
+				1CA8C52F1EE4338400200E08 /* libWspxLogger_iOS.a in Frameworks */,
+				1CC5E2FC1EE2B71800058A72 /* UIKit.framework in Frameworks */,
+				1CC5E6021EE2C2FF00058A72 /* wax.framework in Frameworks */,
+				1CC5E2FA1EE2B71400058A72 /* Foundation.framework in Frameworks */,
+				1CC5E2E21EE2700800058A72 /* libstdc++.6.0.9.tbd in Frameworks */,
+				1CC5E2E01EE26FF500058A72 /* libsqlite3.0.tbd in Frameworks */,
+				1CC5E2DE1EE26FED00058A72 /* JavaScriptCore.framework in Frameworks */,
+				1CC5E2DB1EE25A8900058A72 /* Cycript.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,13 +168,94 @@
 				1C45F9621EE02FC70002A18A /* OCTrace.h */,
 				1C45F9631EE02FC70002A18A /* OCTraceImage.cpp */,
 				1C45F9641EE02FC70002A18A /* OCTraceImage.h */,
+				1C45F9691EE05D9A0002A18A /* OCTraceLogger.cpp */,
+				1C45F96A1EE05D9A0002A18A /* OCTraceLogger.h */,
+				1C45F96D1EE060270002A18A /* OCTraceLocalLogger.cpp */,
+				1C45F96E1EE060270002A18A /* OCTraceLocalLogger.h */,
+				1C45F9711EE134030002A18A /* OCTraceRemoteLogger.cpp */,
+				1C45F9721EE134030002A18A /* OCTraceRemoteLogger.h */,
+				1C592A191EE1610000B2AC94 /* OCTraceUtils.cpp */,
+				1C592A1A1EE1610000B2AC94 /* OCTraceUtils.h */,
 			);
 			path = objctrace;
+			sourceTree = "<group>";
+		};
+		1CA8C5261EE3D08100200E08 /* WspxLogger */ = {
+			isa = PBXGroup;
+			children = (
+				1CA8C5271EE3D08A00200E08 /* WspxLogger.xcodeproj */,
+				1CA8C52D1EE431D700200E08 /* WspxLogger.h */,
+			);
+			name = WspxLogger;
+			sourceTree = "<group>";
+		};
+		1CA8C5281EE3D08A00200E08 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1CA8C52C1EE3D08A00200E08 /* libWspxLogger_iOS.a */,
+				1C6D40E61EE567D60077AE31 /* libWspxLogger_OSX.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1CC5E2D91EE25A8900058A72 /* cycript */ = {
+			isa = PBXGroup;
+			children = (
+				1CC5E2DA1EE25A8900058A72 /* Cycript.framework */,
+			);
+			path = cycript;
+			sourceTree = "<group>";
+		};
+		1CC5E2DC1EE26FED00058A72 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1C1BA20C1EE7DE4D00810953 /* libxml2.tbd */,
+				1CC5E2FD1EE2B72600058A72 /* CoreGraphics.framework */,
+				1CC5E2FB1EE2B71800058A72 /* UIKit.framework */,
+				1CC5E2F91EE2B71400058A72 /* Foundation.framework */,
+				1CC5E2E11EE2700800058A72 /* libstdc++.6.0.9.tbd */,
+				1CC5E2DF1EE26FF500058A72 /* libsqlite3.0.tbd */,
+				1CC5E2DD1EE26FED00058A72 /* JavaScriptCore.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1CC5E2E31EE276B700058A72 /* Testcase */ = {
+			isa = PBXGroup;
+			children = (
+				1CC5E2E41EE276E300058A72 /* OCTraceTest.h */,
+				1CC5E2E51EE276E300058A72 /* OCTraceTest.m */,
+				1CC5E6091EE2E13D00058A72 /* WaxTest.h */,
+				1CC5E60A1EE2E13D00058A72 /* WaxTest.m */,
+			);
+			path = Testcase;
+			sourceTree = "<group>";
+		};
+		1CC5E6001EE2C2FF00058A72 /* wax */ = {
+			isa = PBXGroup;
+			children = (
+				1CC5E6011EE2C2FF00058A72 /* wax.framework */,
+			);
+			path = wax;
+			sourceTree = "<group>";
+		};
+		1CECCB9D1EE960D500D58A16 /* Hook */ = {
+			isa = PBXGroup;
+			children = (
+				1CECCB9F1EE960E700D58A16 /* NSBundle+Hooked.h */,
+				1CECCBA01EE960E700D58A16 /* NSBundle+Hooked.m */,
+				1CECCBA31EE9617E00D58A16 /* MethodSwizzling.h */,
+				1CECCBA41EE9617E00D58A16 /* MethodSwizzling.m */,
+			);
+			path = Hook;
 			sourceTree = "<group>";
 		};
 		C63AC1A01E838B8E0094B1C5 /* Vendors */ = {
 			isa = PBXGroup;
 			children = (
+				1CA8C5261EE3D08100200E08 /* WspxLogger */,
+				1CC5E6001EE2C2FF00058A72 /* wax */,
+				1CC5E2D91EE25A8900058A72 /* cycript */,
 				1C45F9601EE02FB50002A18A /* objctrace */,
 				C63AC1A11E838BB70094B1C5 /* fishhook */,
 			);
@@ -111,6 +279,7 @@
 				C6B263291E7BCA86009B4DEA /* Tools */,
 				C6B2634A1E7BCB31009B4DEA /* IPAPatch-DummyApp */,
 				C6B263081E7BC97B009B4DEA /* Products */,
+				1CC5E2DC1EE26FED00058A72 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -126,10 +295,14 @@
 		C6B263091E7BC97B009B4DEA /* IPAPatch */ = {
 			isa = PBXGroup;
 			children = (
+				1CECCB9D1EE960D500D58A16 /* Hook */,
+				1CC5E2E31EE276B700058A72 /* Testcase */,
 				C63AC1A01E838B8E0094B1C5 /* Vendors */,
 				C6B2630B1E7BC97B009B4DEA /* Info.plist */,
 				C6B263251E7BC9DF009B4DEA /* IPAPatchEntry.h */,
 				C6B263261E7BC9DF009B4DEA /* IPAPatchEntry.mm */,
+				1C1BA2061EE7CCD900810953 /* IPAPatchScript.h */,
+				1C1BA2071EE7CCD900810953 /* IPAPatchScript.mm */,
 				C63AC1A81E8392210094B1C5 /* IPAPatchBypassAntiDebugging.h */,
 				C63AC1A91E8392210094B1C5 /* IPAPatchBypassAntiDebugging.m */,
 			);
@@ -172,11 +345,21 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1C1BA2081EE7CCD900810953 /* IPAPatchScript.h in Headers */,
+				1CA8C52E1EE431D700200E08 /* WspxLogger.h in Headers */,
 				1C45F9661EE02FC70002A18A /* OCTrace.h in Headers */,
 				C6B263271E7BC9DF009B4DEA /* IPAPatchEntry.h in Headers */,
+				1C45F9741EE134030002A18A /* OCTraceRemoteLogger.h in Headers */,
+				1CC5E60B1EE2E13D00058A72 /* WaxTest.h in Headers */,
+				1C45F96C1EE05D9A0002A18A /* OCTraceLogger.h in Headers */,
+				1CECCBA51EE9617E00D58A16 /* MethodSwizzling.h in Headers */,
+				1CC5E2E61EE276E300058A72 /* OCTraceTest.h in Headers */,
 				C63AC1A61E838BB70094B1C5 /* fishhook.h in Headers */,
+				1C592A1C1EE1610000B2AC94 /* OCTraceUtils.h in Headers */,
 				C63AC1AA1E8392210094B1C5 /* IPAPatchBypassAntiDebugging.h in Headers */,
+				1CECCBA11EE960E700D58A16 /* NSBundle+Hooked.h in Headers */,
 				1C45F9681EE02FC70002A18A /* OCTraceImage.h in Headers */,
+				1C45F9701EE060270002A18A /* OCTraceLocalLogger.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -195,6 +378,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				1C6D40E81EE5685A0077AE31 /* PBXTargetDependency */,
 			);
 			name = IPAPatch;
 			productName = IPAPatch;
@@ -252,6 +436,12 @@
 			mainGroup = C6B262FD1E7BC97B009B4DEA;
 			productRefGroup = C6B263081E7BC97B009B4DEA /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 1CA8C5281EE3D08A00200E08 /* Products */;
+					ProjectRef = 1CA8C5271EE3D08A00200E08 /* WspxLogger.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				C6B263481E7BCB31009B4DEA /* IPAPatch-DummyApp */,
@@ -259,6 +449,23 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		1C6D40E61EE567D60077AE31 /* libWspxLogger_OSX.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libWspxLogger_OSX.a;
+			remoteRef = 1C6D40E51EE567D60077AE31 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		1CA8C52C1EE3D08A00200E08 /* libWspxLogger_iOS.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libWspxLogger_iOS.a;
+			remoteRef = 1CA8C52B1EE3D08A00200E08 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		C6B263051E7BC97B009B4DEA /* Resources */ = {
@@ -298,11 +505,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1C1BA2091EE7CCD900810953 /* IPAPatchScript.mm in Sources */,
+				1CECCBA21EE960E700D58A16 /* NSBundle+Hooked.m in Sources */,
 				C63AC1AB1E8392210094B1C5 /* IPAPatchBypassAntiDebugging.m in Sources */,
+				1C45F96F1EE060270002A18A /* OCTraceLocalLogger.cpp in Sources */,
 				1C45F9651EE02FC70002A18A /* OCTrace.cpp in Sources */,
 				C6B263281E7BC9DF009B4DEA /* IPAPatchEntry.mm in Sources */,
+				1CECCBA61EE9617E00D58A16 /* MethodSwizzling.m in Sources */,
+				1C592A1B1EE1610000B2AC94 /* OCTraceUtils.cpp in Sources */,
+				1CC5E60C1EE2E13D00058A72 /* WaxTest.m in Sources */,
 				C63AC1A51E838BB70094B1C5 /* fishhook.c in Sources */,
+				1C45F9731EE134030002A18A /* OCTraceRemoteLogger.cpp in Sources */,
 				1C45F9671EE02FC70002A18A /* OCTraceImage.cpp in Sources */,
+				1C45F96B1EE05D9A0002A18A /* OCTraceLogger.cpp in Sources */,
+				1CC5E2E71EE276E300058A72 /* OCTraceTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -319,6 +535,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		1C6D40E81EE5685A0077AE31 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = WspxLogger_iOS;
+			targetProxy = 1C6D40E71EE5685A0077AE31 /* PBXContainerItemProxy */;
+		};
 		C6B263611E7BCC65009B4DEA /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = C6B263061E7BC97B009B4DEA /* IPAPatch */;
@@ -353,6 +574,7 @@
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_BITCODE = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -405,6 +627,7 @@
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_BITCODE = NO;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -436,6 +659,11 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/IPAPatch/Vendors/cycript",
+					"$(PROJECT_DIR)/IPAPatch/Vendors/wax",
+				);
 				INFOPLIST_FILE = IPAPatch/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -459,6 +687,11 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/IPAPatch/Vendors/cycript",
+					"$(PROJECT_DIR)/IPAPatch/Vendors/wax",
+				);
 				INFOPLIST_FILE = IPAPatch/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
