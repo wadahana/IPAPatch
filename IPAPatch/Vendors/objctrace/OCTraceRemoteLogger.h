@@ -1,14 +1,26 @@
 //
-//  OCTraceRemoteLogger.hpp
+//  OCTraceRemoteLogger.h
 //  IPAPatch
 //
-//  Created by 吴昕 on 02/06/2017.
-//  Copyright © 2017 Weibo. All rights reserved.
+//  Created by wadahana on 02/06/2017.
+//  Copyright © 2017 . All rights reserved.
 //
 
-#ifndef OCTraceRemoteLogger_hpp
-#define OCTraceRemoteLogger_hpp
+#ifndef OCTraceRemoteLogger_h
+#define OCTraceRemoteLogger_h
 
 #include <stdio.h>
 
-#endif /* OCTraceRemoteLogger_hpp */
+#include "OCTraceLogger.h"
+
+
+class OCTraceRemoteLogger : public OCTraceLogger {
+public:
+    OCTraceRemoteLogger();
+    ~OCTraceRemoteLogger();
+protected:
+    virtual void trace(OCTraceLoggerCallee & callee);
+};
+
+
+#endif /* OCTraceRemoteLogger_h */

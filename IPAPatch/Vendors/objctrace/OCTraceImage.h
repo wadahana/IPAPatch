@@ -3,7 +3,7 @@
 //  IPAPatch
 //
 //  Created by wadahana on 01/06/2017.
-//  Copyright © 2017 Weibo. All rights reserved.
+//  Copyright © 2017. All rights reserved.
 //
 
 #ifndef XTraceImage_h

@@ -3,7 +3,7 @@
 //  IPAPatch
 //
 //  Created by wadahana on 01/06/2017.
-//  Copyright © 2017 Weibo. All rights reserved.
+//  Copyright © 2017. All rights reserved.
 //
 
 #include <unistd.h>
@@ -34,13 +34,17 @@
 
 #include "OCTrace.h"
 #include "OCTraceImage.h"
-
+#include "OCTraceLogger.h"
+#include "OCTraceLocalLogger.h"
+#include "OCTraceRemoteLogger.h"
 #include <vector>
 #include <string>
 
+static OCTraceLogger * s_logger = NULL;
 static const char * s_skip_image_names[] = {
     "WeChat",
     "DYZB",
+    "IPAPatch",
     NULL,
 };
 
@@ -94,22 +98,30 @@ void * __hook_callback_pre(id self, SEL op, intptr_t arg0, intptr_t arg1) {
     Class clazz = objc_lookUpClass(class_name);
     
     if (!__skip_image_addr((intptr_t)clazz) && !__skip_class_name(class_name)) {
+#if 0
         const char* op_name = (const char*) op;
         op_name = !op_name ? "null" : op_name;
-        
+
         __uint64_t threadId = 0;
         if (pthread_threadid_np(0, &threadId)) {
             threadId = pthread_mach_thread_np(pthread_self());
         }
         
         fprintf(stderr, "[%ld:%llu] [%s %s] -> \n", (long)getpid(), threadId, class_name, op_name);
+#endif
+        if (s_logger) {
+            s_logger->logBeforeCallee((intptr_t)self, (intptr_t)op);
+        }
     }
     return (void *)s_origin_objc_msgSend;
 }
 
 extern "C"
 void  __hook_callback_post(id self, SEL op) {
-    fprintf(stderr, "post self :%p, op:%s\n", self, (const char *)op);
+//    fprintf(stderr, "post self :%p, op:%s\n", self, (const char *)op);
+    if (s_logger) {
+        s_logger->logAfterCallee((intptr_t)self, (intptr_t)op);
+    }
     return;
 }
 
@@ -254,10 +266,11 @@ int OCTraceInit() {
     }
     
 #endif
+    //s_logger = new OCTraceLocalLogger();
+    s_logger = new OCTraceRemoteLogger();
     
-    int retval = 0;
     s_origin_objc_msgSend = (fn_objc_msgSend)dlsym(RTLD_DEFAULT, "objc_msgSend");
-    retval = rebind_symbols((struct rebinding[1]){{"objc_msgSend", (void *)new_objc_msgSend}}, 1);
-    return retval >= 0;
+    return rebind_symbols((struct rebinding[1]){{"objc_msgSend", (void *)new_objc_msgSend}}, 1);
+
 }
 

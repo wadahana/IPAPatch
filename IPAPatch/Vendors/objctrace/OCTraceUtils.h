@@ -11,4 +11,11 @@
 
 #include <stdio.h>
 #include <string>
+
+void string_appendv(std::string* dst, const char* format, va_list ap);
+
+void string_appendf(std::string* dst, const char* format, ...);
+
+std::string string_sprintf(const char* format, ...);
+
 #endif /* OCTraceUtils_h */

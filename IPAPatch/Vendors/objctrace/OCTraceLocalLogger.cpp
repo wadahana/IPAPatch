@@ -7,19 +7,27 @@
 //
 
 #include "OCTraceLocalLogger.h"
+#include "OCTraceUtils.h"
 
-OCTraceLocalLogger::OCTraceDumpLogger() {
-
-}
-
-OCTraceDumpLogger::~OCTraceDumpLogger() {
+OCTraceLocalLogger::OCTraceLocalLogger() {
 
 }
 
-void OCTraceDumpLogger::logBeforeCallee(intptr_t obj_ptr, intptr_t op_ptr) {
+OCTraceLocalLogger::~OCTraceLocalLogger() {
 
 }
 
-void OCTraceDumpLogger::logAfterCallee(intptr_t obj_ptr, intptr_t op_ptr) {
+void OCTraceLocalLogger::trace(OCTraceLoggerCallee & callee) {
+//    fprintf(stderr, "trace [%llu:%llu] [%s %s] -> depth(%d)\n",
+//            callee.m_process_id, callee.m_thread_id,
+//            callee.m_class_name.c_str(), callee.m_op_name.c_str(), callee.m_depth);
+    
+    std::string line = string_sprintf("octrace [%llu:%llu] |", callee.m_process_id, callee.m_thread_id);
+    for (int i = 0; i < callee.m_depth; i++) {
+        line.append("- ");
+    }
+    string_appendf(&line, "- [%s %s]", callee.m_class_name.c_str(), callee.m_op_name.c_str());
 
+    fprintf(stderr, "%s\n", line.c_str());
+    fflush(stderr);
 }

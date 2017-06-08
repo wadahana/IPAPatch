@@ -3,7 +3,7 @@
 //  IPAPatch
 //
 //  Created by wadahana on 01/06/2017.
-//  Copyright © 2017 Weibo. All rights reserved.
+//  Copyright © 2017. All rights reserved.
 //
 
 
@@ -31,7 +31,7 @@
 #include <string>
 #include <map>
 
-static bool s_dump_image_loading = false;
+static bool s_dump_image_loading = true;
 
 static std::map<std::string, OCTraceImage> s_image_map;
 
@@ -39,7 +39,7 @@ const static OCTraceImage s_null_image;
 
 static const uuid_t *__octrace_image_retrieve_uuid(const struct mach_header *mh);
 
-static uint64_t __octrace_image_text_segment_size(const struct mach_header *mh);
+//static uint64_t __octrace_image_text_segment_size(const struct mach_header *mh);
 
 static uint64_t __octrace_image_total_size(const struct mach_header *mh);
 
@@ -106,7 +106,7 @@ static void __octrace_add_image_to_list(const struct mach_header *mh) {
                         filename.c_str(),
                         image_uuid,
                         image_base_address,
-                        image_base_address + image_total_size);
+                        (intptr_t)(image_base_address + image_total_size));
     
     s_image_map.insert(std::pair<std::string, OCTraceImage>(filename, image));
     return;
@@ -228,6 +228,7 @@ static uint64_t __octrace_image_total_size(const struct mach_header *mh) {
     return total_size;
 }
 
+#if 0
 static uint64_t __octrace_image_text_segment_size(const struct mach_header *mh)
 {
     static const char *text_segment_name = "__TEXT";
@@ -258,7 +259,7 @@ static uint64_t __octrace_image_text_segment_size(const struct mach_header *mh)
     
     return text_size;
 }
-
+#endif
 
 void OCTraceImageListInit() {
     

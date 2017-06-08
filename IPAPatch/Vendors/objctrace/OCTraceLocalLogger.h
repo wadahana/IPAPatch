@@ -1,35 +1,26 @@
 //
-//  OCTraceDumpLogger.h
+//  OCTraceLocalLogger.h
 //  IPAPatch
 //
 //  Created by wadahana on 01/06/2017.
 //  Copyright © 2017 . All rights reserved.
 //
 
-#ifndef OCTraceDumpLogger_h
-#define OCTraceDumpLogger_h
+#ifndef OCTraceLocalLogger_h
+#define OCTraceLocalLogger_h
 
-#include <sys/types.h>
+
 #include <stdio.h>
 
-#include <string>
-#include <stack>
-#include <map>
 #include "OCTraceLogger.h"
 
 
-class OCTraceDumpLogger : public OCTraceLogger {
+class OCTraceLocalLogger : public OCTraceLogger {
 public:
-    OCTraceDumpLogger();
-    ~OCTraceDumpLogger();
-    
-public:
-    typedef std::stack<<#class _Tp#>>
-    virtual void logBeforeCallee(intptr_t obj_ptr, intptr_t op_ptr);
-    virtual void logAfterCallee(intptr_t obj_ptr, intptr_t op_ptr);
-    
+    OCTraceLocalLogger();
+    ~OCTraceLocalLogger();
 protected:
-    
+    virtual void trace(OCTraceLoggerCallee & callee);
 };
 
-#endif /* OCTraceDumpLogger_h */
+#endif /* OCTraceLocalLogger_h */
