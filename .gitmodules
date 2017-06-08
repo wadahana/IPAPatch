@@ -1,0 +1,3 @@
+[submodule "IPAPatch/Vendors/WspxLogger"]
+	path = IPAPatch/Vendors/WspxLogger
+	url = git@github.com:wadahana/WspxLogger.git
