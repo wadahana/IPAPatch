@@ -10,4 +10,7 @@
 
 @interface OCTraceTest : NSObject
 
++ (instancetype) shareInstance;
+
+- (void) test;
 @end

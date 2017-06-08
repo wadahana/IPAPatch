@@ -8,6 +8,19 @@
 
 #import "WaxTest.h"
 
+static WaxTest * sWaxTestInstance = nil;
 @implementation WaxTest
+
++ (instancetype) shareInstance {
+    static dispatch_once_t onceToken ;
+    dispatch_once(&onceToken, ^{
+        if (sWaxTestInstance == nil) {
+            sWaxTestInstance = [[WaxTest alloc] init];
+        }
+    });
+    return sWaxTestInstance;
+}
+
+
 
 @end
