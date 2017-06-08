@@ -2,12 +2,18 @@
 //  MethodSwizzling.h
 //  IPAPatch
 //
-//  Created by 吴昕 on 08/06/2017.
-//  Copyright © 2017 Weibo. All rights reserved.
+//  Created by wadahana on 08/06/2017.
+//  Copyright © 2017 . All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
 
-@interface MethodSwizzling : NSObject
+#ifndef WspxMethodSwizzling_h
+#define WspxMethodSwizzling_h
 
-@end
+
+void exchangeMethod(Class aClass, SEL oldSEL, SEL newSEL);
+
+void exchangeMethodClass(Class aClass, SEL oldSEL, SEL newSEL);
+
+#endif /* WspxMethodSwizzling_h */

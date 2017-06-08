@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
-@interface NSBundle_Hooked : NSObject
+@interface NSBundle(Hooked)
+
++ (void) hook;
 
 @end

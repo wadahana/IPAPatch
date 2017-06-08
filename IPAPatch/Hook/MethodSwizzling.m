@@ -1,13 +1,31 @@
 //
 //  MethodSwizzling.m
-//  IPAPatch
+//  AppProxy
 //
-//  Created by 吴昕 on 08/06/2017.
-//  Copyright © 2017 Weibo. All rights reserved.
+//  Created by wadahana on 04/05/2017.
+//  Copyright © 2017 . All rights reserved.
 //
 
-#import "MethodSwizzling.h"
+#import <objc/objc.h>
+#import <objc/runtime.h>
 
-@implementation MethodSwizzling
+#import <Foundation/Foundation.h>
 
-@end
+
+void exchangeMethod(Class aClass, SEL oldSEL, SEL newSEL)
+{
+    Method oldMethod = class_getInstanceMethod(aClass, oldSEL);
+    assert(oldMethod);
+    Method newMethod = class_getInstanceMethod(aClass, newSEL);
+    assert(newMethod);
+    method_exchangeImplementations(oldMethod, newMethod);
+}
+
+void exchangeMethodClass(Class aClass, SEL oldSEL, SEL newSEL)
+{
+    Method oldMethod = class_getClassMethod(aClass, oldSEL);
+    assert(oldMethod);
+    Method newMethod = class_getClassMethod(aClass, newSEL);
+    assert(newMethod);
+    method_exchangeImplementations(oldMethod, newMethod);
+}
