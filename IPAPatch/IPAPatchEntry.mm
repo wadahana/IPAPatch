@@ -10,7 +10,7 @@
 #import "Cycript/Cycript.h"
 
 #import "IPAPatchEntry.h"
-#import "IPAPatchScript.h"
+#import "IPAPatchInterpreter.h"
 #import "IPAPatchBypassAntiDebugging.h"
 #import "OCTrace.h"
 #import "OCTraceTest.h"
@@ -19,22 +19,20 @@
 
 @implementation IPAPatchEntry
 
-+ (void) dump {
-    NSLog(@"xxx dump");
-}
-
 + (void)load
 {
 
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         
+        IPAPatchInterpreter * interpreter = [IPAPatchInterpreter shareInstance];
+        
         [NSBundle hook];
         
-        WspxLoggerStart(8899, 30);
+        WspxLoggerStart(8899, 30, interpreter);
         
         NSLog(@"start wspx logger ....\n");
         
-        [[IPAPatchScript shareInstance] loadWax];
+        [interpreter loadWax];
         // prevent anti debug
         [IPAPatchBypassAntiDebugging load];
         

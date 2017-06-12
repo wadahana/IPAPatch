@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1C1BA2081EE7CCD900810953 /* IPAPatchScript.h in Headers */ = {isa = PBXBuildFile; fileRef = 1C1BA2061EE7CCD900810953 /* IPAPatchScript.h */; };
-		1C1BA2091EE7CCD900810953 /* IPAPatchScript.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1C1BA2071EE7CCD900810953 /* IPAPatchScript.mm */; };
+		1C1BA2081EE7CCD900810953 /* IPAPatchInterpreter.h in Headers */ = {isa = PBXBuildFile; fileRef = 1C1BA2061EE7CCD900810953 /* IPAPatchInterpreter.h */; };
+		1C1BA2091EE7CCD900810953 /* IPAPatchInterpreter.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1C1BA2071EE7CCD900810953 /* IPAPatchInterpreter.mm */; };
 		1C1BA20D1EE7DE4D00810953 /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C1BA20C1EE7DE4D00810953 /* libxml2.tbd */; };
 		1C45F9651EE02FC70002A18A /* OCTrace.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1C45F9611EE02FC70002A18A /* OCTrace.cpp */; };
 		1C45F9661EE02FC70002A18A /* OCTrace.h in Headers */ = {isa = PBXBuildFile; fileRef = 1C45F9621EE02FC70002A18A /* OCTrace.h */; };
@@ -72,6 +72,27 @@
 			remoteGlobalIDString = 1CA8C5001EE3C17C00200E08;
 			remoteInfo = WspxLogger;
 		};
+		1CF57BFB1EEE695E00BD0D07 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1CA8C5271EE3D08A00200E08 /* WspxLogger.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 1C1BA2121EE7F02000810953;
+			remoteInfo = octrace;
+		};
+		1CF57BFD1EEE695E00BD0D07 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1CA8C5271EE3D08A00200E08 /* WspxLogger.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 1C1BA21D1EE7F02F00810953;
+			remoteInfo = logcat;
+		};
+		1CF57BFF1EEE695E00BD0D07 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1CA8C5271EE3D08A00200E08 /* WspxLogger.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 1C1BA2281EE7F05E00810953;
+			remoteInfo = wxcript;
+		};
 		C6B263601E7BCC65009B4DEA /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = C6B262FE1E7BC97B009B4DEA /* Project object */;
@@ -82,8 +103,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1C1BA2061EE7CCD900810953 /* IPAPatchScript.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IPAPatchScript.h; sourceTree = "<group>"; };
-		1C1BA2071EE7CCD900810953 /* IPAPatchScript.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = IPAPatchScript.mm; sourceTree = "<group>"; };
+		1C1BA2061EE7CCD900810953 /* IPAPatchInterpreter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IPAPatchInterpreter.h; sourceTree = "<group>"; };
+		1C1BA2071EE7CCD900810953 /* IPAPatchInterpreter.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = IPAPatchInterpreter.mm; sourceTree = "<group>"; };
 		1C1BA20C1EE7DE4D00810953 /* libxml2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.tbd; path = usr/lib/libxml2.tbd; sourceTree = SDKROOT; };
 		1C45F9611EE02FC70002A18A /* OCTrace.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = OCTrace.cpp; sourceTree = "<group>"; };
 		1C45F9621EE02FC70002A18A /* OCTrace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCTrace.h; sourceTree = "<group>"; };
@@ -194,6 +215,9 @@
 			children = (
 				1CA8C52C1EE3D08A00200E08 /* libWspxLogger_iOS.a */,
 				1C6D40E61EE567D60077AE31 /* libWspxLogger_OSX.a */,
+				1CF57BFC1EEE695E00BD0D07 /* octrace */,
+				1CF57BFE1EEE695E00BD0D07 /* logcat */,
+				1CF57C001EEE695E00BD0D07 /* wxcript */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -301,8 +325,8 @@
 				C6B2630B1E7BC97B009B4DEA /* Info.plist */,
 				C6B263251E7BC9DF009B4DEA /* IPAPatchEntry.h */,
 				C6B263261E7BC9DF009B4DEA /* IPAPatchEntry.mm */,
-				1C1BA2061EE7CCD900810953 /* IPAPatchScript.h */,
-				1C1BA2071EE7CCD900810953 /* IPAPatchScript.mm */,
+				1C1BA2061EE7CCD900810953 /* IPAPatchInterpreter.h */,
+				1C1BA2071EE7CCD900810953 /* IPAPatchInterpreter.mm */,
 				C63AC1A81E8392210094B1C5 /* IPAPatchBypassAntiDebugging.h */,
 				C63AC1A91E8392210094B1C5 /* IPAPatchBypassAntiDebugging.m */,
 			);
@@ -345,7 +369,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1C1BA2081EE7CCD900810953 /* IPAPatchScript.h in Headers */,
+				1C1BA2081EE7CCD900810953 /* IPAPatchInterpreter.h in Headers */,
 				1CA8C52E1EE431D700200E08 /* WspxLogger.h in Headers */,
 				1C45F9661EE02FC70002A18A /* OCTrace.h in Headers */,
 				C6B263271E7BC9DF009B4DEA /* IPAPatchEntry.h in Headers */,
@@ -465,6 +489,27 @@
 			remoteRef = 1CA8C52B1EE3D08A00200E08 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
+		1CF57BFC1EEE695E00BD0D07 /* octrace */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			path = octrace;
+			remoteRef = 1CF57BFB1EEE695E00BD0D07 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		1CF57BFE1EEE695E00BD0D07 /* logcat */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			path = logcat;
+			remoteRef = 1CF57BFD1EEE695E00BD0D07 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		1CF57C001EEE695E00BD0D07 /* wxcript */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			path = wxcript;
+			remoteRef = 1CF57BFF1EEE695E00BD0D07 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 /* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
@@ -505,7 +550,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1C1BA2091EE7CCD900810953 /* IPAPatchScript.mm in Sources */,
+				1C1BA2091EE7CCD900810953 /* IPAPatchInterpreter.mm in Sources */,
 				1CECCBA21EE960E700D58A16 /* NSBundle+Hooked.m in Sources */,
 				C63AC1AB1E8392210094B1C5 /* IPAPatchBypassAntiDebugging.m in Sources */,
 				1C45F96F1EE060270002A18A /* OCTraceLocalLogger.cpp in Sources */,

@@ -1,12 +1,14 @@
 //
-//  IPAPatchScript.m
+//  IPAPatchInterpreter.m
 //  IPAPatch
 //
 //  Created by wadahana on 07/06/2017.
 //  Copyright © 2017. All rights reserved.
 //
 
-#import "IPAPatchScript.h"
+#import "IPAPatchInterpreter.h"
+#import "WspxLogger.h"
+
 extern "C" {
 #import "wax/wax.h"
 #import "wax/wax_http.h"
@@ -16,13 +18,21 @@ extern "C" {
 };
 
 
-static IPAPatchScript * sInstance = nil;
-@implementation IPAPatchScript
+static IPAPatchInterpreter * sInstance = nil;
+
+@interface IPAPatchInterpreter () 
+
+
+@end
+
+@implementation IPAPatchInterpreter {
+    NSString * _rootDirectory;
+}
 
 + (instancetype) shareInstance {
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        sInstance = [[IPAPatchScript alloc] init];
+        sInstance = [[IPAPatchInterpreter alloc] init];
     });
     return sInstance;
 }
@@ -30,32 +40,23 @@ static IPAPatchScript * sInstance = nil;
 - (instancetype) init {
     self = [super init];
     if (self) {
-    
+        _rootDirectory = nil;
     }
     return self;
 }
 
 - (void) loadWax {
     wax_start(nil, luaopen_wax_http, luaopen_wax_json, luaopen_wax_xml, luaopen_wax_filesystem, nil);
+    wax_runLuaString("WSPX:enableDebug(true)\n WSPX:start()\n print 'wax start'\n");
 }
 
-- (void) loadFile: (NSString *)filename {
-    NSString * path = [self scriptDirection];
-    if (path) {
-        NSString * fullPath = [path stringByAppendingPathComponent:filename];
-        wax_runLuaFile([fullPath UTF8String]);
-    }
+- (void) loadJsPatch {
+
 }
 
-- (void) loadScript: (NSString *)script {
-    if (script && [script length] > 0) {
-        wax_runLuaString([script UTF8String]);
-    }
-}
-
-- (BOOL) saveScript : (NSData *)content filename : (NSString *) filename {
+- (BOOL) uploadScriptFile: (NSString *) filename script:(NSData *)content {
     BOOL result = NO;
-    NSString * path = [self scriptDirection];
+    NSString * path = [self rootDirectory];
     if (path) {
         NSString * fullPath = [path stringByAppendingPathComponent:filename];
         result = [content writeToFile:fullPath atomically:YES];
@@ -63,7 +64,32 @@ static IPAPatchScript * sInstance = nil;
     return result;
 }
 
-- (NSString *) scriptDirection {
+- (void) runScriptFile: (NSString *)filename {
+    NSString * path = [self rootDirectory];
+    if (path) {
+        NSString * fullPath = [path stringByAppendingPathComponent:filename];
+        if ([[NSFileManager defaultManager] fileExistsAtPath:fullPath]) {
+            wax_runLuaFile([fullPath UTF8String]);
+        }
+    }
+    return;
+}
+
+- (void) runLuaScript: (NSString *)script {
+    if (script && [script length] > 0) {
+        wax_runLuaString([script UTF8String]);
+    }
+}
+
+- (void) runJavaScript: (NSString *)script {
+
+}
+
+
+- (NSString *) rootDirectory {
+    if (_rootDirectory) {
+        return _rootDirectory;
+    }
     NSError * error = nil;
     NSFileManager *fileManager = [NSFileManager defaultManager];
     NSString * docPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
@@ -72,7 +98,8 @@ static IPAPatchScript * sInstance = nil;
     BOOL result = [fileManager fileExistsAtPath:scriptPath isDirectory:&dir];
     if (result) {
         if (dir) {
-            return scriptPath;
+            _rootDirectory = scriptPath;
+            return _rootDirectory;
         }
         [fileManager removeItemAtPath:scriptPath error: &error];
     }
@@ -83,6 +110,7 @@ static IPAPatchScript * sInstance = nil;
         NSLog(@"create script direction %@ fail, %@\n", scriptPath, error);
         scriptPath = nil;
     }
+    _rootDirectory = scriptPath;
     return scriptPath;
 }
 
